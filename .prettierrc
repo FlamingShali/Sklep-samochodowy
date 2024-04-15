@@ -1,0 +1,13 @@
+{
+  "singleQuote": true,
+  "arrowParens": "avoid",
+  "semi": true,
+  "Overrides": [
+    {
+      "files": "legacy/.ts",
+      "options": {
+        "semi": false
+      }
+    }
+  ]
+}
