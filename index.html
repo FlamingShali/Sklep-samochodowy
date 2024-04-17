@@ -10,34 +10,64 @@
 </head>
 
 <body>
-    <section class="mainPage">
-    <img id="backimage" src="images/cars/background.jpg"></img>
-    <h1 class="title">Welcome to the Car shop!</h1>
-    <p id="specify">Please, specify the car you would like to buy</p>
-    <ul>
-        <li>
-            <p class="carName">
-                asdasdsa
-            </p>
-            <img class="cars" src="images/cars/kia-k5-2025-02.webp">
-        </li>
-        <p class="carName">
 
-        </p>
-        <li>
-            <img class="cars" src="images/cars/kia-k5-2025-02.webp">
-        </li>
-        <li class="carName">
-            <img class="cars" src="images/cars/kia-k5-2025-02.webp">
-        </li>
-    </ul>
-    
+    <section class="mainPage page">
+
+        <h1 class="title">Welcome to the Car shop!</h1>
+        <p id="specify">Please, specify the car you would like to buy</p>
+        <ul>
+            <li>
+                <div class="car" onclick="showCarDetails()">
+                    <img class="cars" src="images/cars/kia-k5-2025-02.webp">
+                    <div>
+                        <p class="carName">
+                            Samochód cos
+                        </p>
+                        <p>
+                            opis element osobny
+                        </p>
+                    </div>
+
+
+                </div>
+
+            </li>
+
+        </ul>
+
 
     </section>
-    
-    <div class="welcome">Heelo</div>
-    <h1 id="Welcome">Welcome</h1>
 
+    <section class="details modal hidden">
+        <div>
+            <label>Rodzaj finansowania</label>
+            <input type="radio" id="gotówka" name="finansowanie">
+            <label for="gotówka">Płatność gotówką</label>
+            <input type="radio" id="Leasing" name="finansowanie">
+            <label for="gotówka">Leasing</label><br>
+            <label for="imię i nazwisko"></label>
+            <input type="text">
+            <label>Imię</label><br>
+            <input type="text">
+            <label>Nazwisko</label><br>
+            <time>data i czas</time>
+            <time datetime="data/czas"></time>
+            </form>
+
+            <br><button class="nextPage" onclick="nextPage()">Next</button>
+        </div>
+
+    </section>
+    <section class="accessories modal ">
+        <div>
+            Akcesoria
+            <input type="radio" id="gotówka" name="finansowanie">
+            <input type="radio" id="gotówka" name="finansowanie">
+            <input type="radio" id="gotówka" name="finansowanie">
+            <input type="radio" id="gotówka" name="finansowanie">
+            <input type="radio" id="gotówka" name="finansowanie">
+        </div>
+    </section>
 </body>
 
 </html>
