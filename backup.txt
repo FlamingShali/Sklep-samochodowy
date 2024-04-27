@@ -1,0 +1,73 @@
+<li class="car">
+                    <h4 class="car--tittle">Kia-k5-2025</h4>
+                    <img class="car--img" src="images/cars/kia-k5-2025-02.webp">
+                    <p class="car--info">Info o samochodzie</p>
+                    <button class="btn--buy">Kupuję</button>
+                </li>
+                <li class="car">
+                    <h4 class="car--tittle">..</h4>
+                    <img class="car--img" src="images/cars/kia-k5-2025-02.webp">
+                    <p class="car--info">Info o samochodzieInfo o samochodzieInfo o samochodzieInfo o samochodzieInfo o
+                        samochodzieInfo o samochodzieInfo o samochodzie</p>
+                    <button class="btn--buy">Kupuję</button>
+                </li>
+                <li class="car">
+                    <h4 class="car--tittle">..</h4>
+                    <img class="car--img" src="images/cars/kia-k5-2025-02.webp">
+                    <p class="car--info">Info o samochodzie</p>
+                    <button class="btn--buy">Kupuję</button>
+                </li>
+                <li class="car">
+                    <h4 class="car--tittle">..</h4>
+                    <img class="car--img" src="images/cars/kia-k5-2025-02.webp">
+                    <p class="car--info">Info o samochodzie</p>
+                    <button class="btn--buy">Kupuję</button>
+                </li>
+                <li class="car">
+                    <h4 class="car--tittle">..</h4>
+                    <img class="car--img" src="images/cars/kia-k5-2025-02.webp">
+                    <p class="car--info">Info o samochodzie</p>
+                    <button class="btn--buy">Kupuję</button>
+                </li>
+                <li class="car">
+                    <h4 class="car--tittle">..</h4>
+                    <img class="car--img" src="images/cars/kia-k5-2025-02.webp">
+                    <p class="car--info">Info o samochodzie</p>
+                    <button class="btn--buy">Kupuję</button>
+                </li>
+                <li class="car">
+                    <h4 class="car--tittle">..</h4>
+                    <img class="car--img" src="images/cars/kia-k5-2025-02.webp">
+                    <p class="car--info">Info o samochodzie</p>
+                    <button class="btn--buy">Kupuję</button>
+                </li>
+                <li class="car">
+                    <h4 class="car--tittle">..</h4>
+                    <img class="car--img" src="images/cars/kia-k5-2025-02.webp">
+                    <p class="car--info">Info o samochodzie</p>
+                    <button class="btn--buy">Kupuję</button>
+                </li>
+                <li class="car">
+                    <h4 class="car--tittle">..</h4>
+                    <img class="car--img" src="images/cars/kia-k5-2025-02.webp">
+                    <p class="car--info">Info o samochodzie</p>
+                    <button class="btn--buy">Kupuję</button>
+                </li>
+                <li class="car">
+                    <h4 class="car--tittle">..</h4>
+                    <img class="car--img" src="images/cars/kia-k5-2025-02.webp">
+                    <p class="car--info">Info o samochodzie</p>
+                    <button class="btn--buy">Kupuję</button>
+                </li>
+                <li class="car">
+                    <h4 class="car--tittle">..</h4>
+                    <img class="car--img" src="images/cars/kia-k5-2025-02.webp">
+                    <p class="car--info">Info o samochodzie</p>
+                    <button class="btn--buy">Kupuję</button>
+                </li>
+                <li class="car">
+                    <h4 class="car--tittle">..</h4>
+                    <img class="car--img" src="images/cars/kia-k5-2025-02.webp">
+                    <p class="car--info">Info o samochodzie</p>
+                    <button class="btn--buy">Kupuję</button>
+                </li>

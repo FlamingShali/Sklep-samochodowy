@@ -1,24 +1,17 @@
 'use strict';
 
-const car = document.getElementById('car')
-const details = document.querySelector('.details') 
-const mainPage = document.querySelector('.mainPage')
-const accessories = document.querySelector('.accessories')
 
-
-
-//Aktualizowanie elementu html
-//
-const showCarDetails = function(){
-    details.classList.remove('hidden')
-    console.log('cos')
-}
-
-const nextPage = function(){
-    details.classList.add('hidden')
-    accessories.classList.remove('hidden')
-}
-
-
-
-
+document.addEventListener('DOMContentLoaded', function () {
+  let carsSelect = document.getElementById('carsSelect');
+  let carList = '';
+  for (let i = 0; i < samochody.length; i++) {
+    let car = `<li class="car">
+                  <h4 class="car--tittle">${samochody[i].tittle}</h4>
+                  <img class="car--img" src="${samochody[i].img}">
+                  <p class="car--info">${samochody[i].opis}</p>
+                  <button class="btn--buy" onclick="document.location='formularzZakupu.html?id=${i}'" ">Kupuję</button>
+                </li>`;
+    carList += car;
+  }
+  carsSelect.innerHTML = carList;
+});
