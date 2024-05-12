@@ -11,73 +11,99 @@
 </head>
 
 <body>
-    <header>
-        <h1>Witaj w serwisie samochodowym Nitro-Cars</h1>
-
-        <nav>
-            <section id="koszyk">
-                <div id="koszyk-btn" class="cart">
-                    <p>Koszyk </p>
-                    <p>>Przejdz do formularza zakupu</p>
+    <div class="main-page">
+        <header class="header">
+            <h1 class="heading-primary">Witaj w serwisie samochodowym Nitro-Cars</h1>
+            <div class="koszyk-info">
+                <div class="cart">
+                    <p id="cart-heading">Twój Koszyk </p>
                     <p id="koszyk-przedmioty" class="koszyk-przedmioty">Ilośc przedmiotów w koszyku:</p>
-                    <p id="cenaOstateczna">Suma: PLN</p>
+                    <p id="cenaOstateczna">Cena do zapłaty: 0 PLN</p><br>
                 </div>
-                <button id="wyczyscKoszykBtn">Wyczyść koszyk</button>
+                <div class="cart-btns">
+                    <button id="cart-btn">Przejdź do formularza</button>
+                    <button id="present-cart">Pokaż co mam w koszyku</button>
+                    <button id="clear-cart">Wyczyść koszyk</button>
+                </div>
+            </div>
+
+            <nav class="main-nav">
+                <ul class="main-nav-list">
+                    <li><a class="main-nav-link" href="#">Strona główna</a></li>
+                    <li><a class="main-nav-link" href="#">O nas</a></li>
+                    <li><a class="main-nav-link" href="#">Samochody</a></li>
+                    <li><a class="main-nav-link" href="#akcesoria">Akcesoria i dodatki</a></li>
+                    <li><a class="main-nav-link" href="#">Kontakt</a></li>
+                </ul>
+
+                <div class="nav-bar-container">
+                    <h2 class="heading tertiary">Szukasz czegoś konkretnego?</h2>
+                    <input class="nav-bar" type="text" placeholder="Search..">
+                </div>
+            </nav>
+
+
+            <section class="about">
+                <h2 class="heading-secondary">Coś o nas</h2>
+                <p class="company-description">Witaj w Nitro-Cars — Twoim zaufanym partnerze w świecie motoryzacji.
+                    Jesteśmy liderem
+                    w branży samochodowej, oferując szeroki wybór pojazdów nowych oraz używanych. Dzięki
+                    wieloletniemu
+                    doświadczeniu, pasji do samochodów i skupieniu na najwyższej jakości obsłudze klienta,
+                    gwarantujemy
+                    satysfakcję i bezpieczeństwo zakupów. Nasz zespół ekspertów jest zawsze gotowy, by pomóc Ci
+                    znaleźć
+                    idealny samochód, który spełni wszystkie Twoje oczekiwania. Odwiedź nas już dziś i dołącz do
+                    tysięcy
+                    zadowolonych klientów, którzy zaufali Nitro-Cars</p>
             </section>
-            <ul>
-                <li><a href="#">Strona główna</a></li>
-                <li><a href="#">O nas</a></li>
-                <li><a href="#">Samochody</a></li>
-                <li><a href="#">Akcesoria i dodatki</a></li>
-                <li><a href="#">Kontakt</a></li>
-            </ul>
+            </nav>
+        </header>
+        <section class="shop">
 
+            <main class="container">
 
-        </nav>
-    </header>
+                <section class="cars">
+                    <h2 class="heading-secondary">Oferta samochodów dostepnych w naszym salonie<h2>
+                            <ul class="cars--select" id="carsSelect">
+                            </ul>
+                </section>
 
-    <main class="container">
-        <section class="about">
-            <h2 class="about-h">Coś o nas</h2>
-            <p class="opis--firmy">Witaj w Nitro-Cars — Twoim zaufanym partnerze w świecie motoryzacji. Jesteśmy liderem
-                w branży samochodowej, oferując szeroki wybór pojazdów nowych oraz używanych. Dzięki wieloletniemu
-                doświadczeniu, pasji do samochodów i skupieniu na najwyższej jakości obsłudze klienta, gwarantujemy
-                satysfakcję i bezpieczeństwo zakupów. Nasz zespół ekspertów jest zawsze gotowy, by pomóc Ci znaleźć
-                idealny samochód, który spełni wszystkie Twoje oczekiwania. Odwiedź nas już dziś i dołącz do tysięcy
-                zadowolonych klientów, którzy zaufali Nitro-Cars</p>
+                <section class="accessories" id="akcesoria">
+                    <h2 class="heading-secondary"> Szukasz osobnych części lub akcesoriów? Znajdziesz je tutaj!</h2>
+                    <ul class="accessories--select" id="accessories-select">
+
+                    </ul>
+                </section>
+
         </section>
-        <section class="cars">
-            <h2>Oferta samochodów dostepnych w naszym salonie</h2>
-            <ul class="cars--select" id="carsSelect">
-            </ul>
-        </section>
-
-        <section class="accessories">
-            <h2>Szukasz osobnych części lub akcesoriów? Znajdziesz je tutaj!</h2>
-            <ul class="accessories--select" id="accessories-select">
-
-            </ul>
-        </section>
+    </div>
+    <section class="modal-container">
         <div class="modal hidden" id="formularz--daneOsobowe">
             <button class="close-modal">&times;</button>
-            <h1>Podaj swoje dane</h1>
+            <h1 class="heading-primary">Podaj swoje dane</h1>
             <div>
-                <h2>Formularz danych przyszłego właściciela</h2>
-                <label for="name">Imię i nazwisko właściciela</label>
-                <input class="nameSurname" pattern="[A-Za-z]+" type="text" id="name" name="name" title="Tylko litery">
-                <p id="pole1"></p>
-                <h3>Wybierz rodzaj finansowania</h3>
-                <input type="radio" name="finansowanie" id="btn-gotowka">
-                <label for="btn-gotowka">Gotówka</label>
-                <input type="radio" name="finansowanie" id="btn-leasing">
-                <label for="btn-leasing">Leasing</label>
+                <form>
 
-                <br>
-                <br>
-                <label>Wybierz datę odbioru zamówienia (dostępna data do 14dni od dziś)</label>
-                <select id="data">
-                    <option></option>
-                </select>
+                    <h2>Formularz danych przyszłego właściciela</h2>
+                    <label for="name">Imię właściciela</label>
+                    <input class="name" type="text" id="name" placeholder="Podaj swoje imię">
+                    <label for="surname">Nazwisko właściciela</label>
+                    <input class="surname" type="text" id="surname" placeholder="Podaj swoje nazwisko">
+                    <p id="pole1"></p>
+                    <h3>Wybierz rodzaj finansowania</h3>
+                    <input type="radio" name="finansowanie" id="btn-gotowka">
+                    <label for="btn-gotowka">Gotówka</label>
+                    <input type="radio" name="finansowanie" id="btn-leasing">
+                    <label for="btn-leasing">Leasing</label>
+
+                    <br>
+                    <br>
+                    <label>Wybierz datę odbioru zamówienia (dostępna data do 14dni od dziś)</label>
+                    <select id="date-of-order-input">
+                        <option></option>
+                    </select>
+                </form>
                 <div id="cenaZaProdukty"></div>
                 <br>
                 <input type="submit" value="Przejdź dalej" class="btn btn-przejdzDalej">
@@ -85,16 +111,36 @@
             </div>
         </div>
         <div class="modal hidden" id="podsumowanie">
-            <button class="close-modal">&times;</button>
+            <button class="close-modal zamknij-podsumowanie">&times;</button>
+            <button class="btn back-to-form">Wróć do formularza</button>
             <h1>Potwierdź swoje dane oraz zamówienie 🚗</h1>
             <h2>Twoje dane</h2>
-            <p id="dane"></p>
+            <p id="data-name"></p>
+            <p id="data-surname"></p>
+            <p id="data-financing"></p>
+            <p id="order-date"></p>
             <h2>Twoje zakupy</h2>
-            <p id="doZaplaty">Do zapłaty</p>
-            <p id="przedmiotyWKoszyku">Przedmioty w koszyku</p>
-            <input type="submit" value="Zamawiam" class="btn">
+            <p class="doZaplaty">Do zapłaty</p>
+            <p class="przedmiotyWKoszyku">Przedmioty w koszyku</p>
+
+
+            <button type="submit" value="Zamawiam" class="btn btn-order">Zamawiam</button>
         </div>
-    </main>
+
+        <div class="modal hidden" id="present-cart-container">
+            <button class="zamknij-podsumowanie">&times;</button>
+
+            <h1>Twoje aktualne zakupy</h1>
+            <p class="cena-koszyk">Do zapłaty</p>
+            <p class="podglad-koszyka">Przedmioty w koszyku</p>
+        </div>
+        <div class="modal hidden" id="last-page">
+            <h1>Dziękujemy za zakup w naszym serwisie! Możesz wrócić do strony głównej</h1>
+            <button class="btn btn--back-to-main-page">Wróć do strony głównej</button>
+        </div>
+        </main>
+    </section>
+
 
     <footer>
         <p>&copy; 2024 Strona Samochodowa</p>
