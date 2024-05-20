@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona Samochodowa</title>
+    <link rel="stylesheet" href="global.css">
+    <script src="dataBase.js" defer></script>
+    <script src="mainScript.js" defer></script>
+</head>
+
+<body>
+    <div class="main-page">
+        <header class="header">
+            <h1 class="heading-primary">Witaj w serwisie samochodowym Nitro-Cars</h1>
+            <div class="cart-info">
+                <div class="cart">
+                    <p id="cart-heading">Twój Koszyk </p>
+                    <p id="cart-items" class="cart-items">Ilośc przedmiotów w koszyku:</p>
+                    <p id="final-price">Cena do zapłaty: 0 PLN</p><br>
+                </div>
+                <div class="cart-btns">
+                    <button id="cart-btn">Przejdź do formularza</button>
+                    <button id="present-cart">Pokaż co mam w koszyku</button>
+                    <button id="clear-cart">Wyczyść koszyk</button>
+                    <button id="clear-entire-local-storage">Wyczyść Local-Storage</button>
+
+                </div>
+            </div>
+
+            <nav class="main-nav">
+                <ul class="main-nav-list">
+                    <li><a class="main-nav-link" href="#">Strona główna</a></li>
+                    <li><a class="main-nav-link" href="#">O nas</a></li>
+                    <li><a class="main-nav-link" href="#">Samochody</a></li>
+                    <li><a class="main-nav-link" href="#id-accessories">Akcesoria i dodatki</a></li>
+                    <li><a class="main-nav-link" href="#">Kontakt</a></li>
+                </ul>
+
+                <div class="nav-bar-container">
+                    <h2 class="heading tertiary">Szukasz czegoś konkretnego?</h2>
+                    <input class="nav-bar" type="text" placeholder="Search..">
+                </div>
+            </nav>
+
+
+            <section class="about">
+                <h2 class="heading-secondary">Coś o nas</h2>
+                <p class="company-description">Witaj w Nitro-Cars — Twoim zaufanym partnerze w świecie motoryzacji.
+                    Jesteśmy liderem
+                    w branży samochodowej, oferując szeroki wybór pojazdów nowych oraz używanych. Dzięki
+                    wieloletniemu
+                    doświadczeniu, pasji do samochodów i skupieniu na najwyższej jakości obsłudze klienta,
+                    gwarantujemy
+                    satysfakcję i bezpieczeństwo zakupów. Nasz zespół ekspertów jest zawsze gotowy, by pomóc Ci
+                    znaleźć
+                    idealny samochód, który spełni wszystkie Twoje oczekiwania. Odwiedź nas już dziś i dołącz do
+                    tysięcy
+                    zadowolonych klientów, którzy zaufali Nitro-Cars</p>
+            </section>
+
+        </header>
+        <section class="shop">
+            <main class="container">
+                <section class="cars">
+                    <h2 class="heading-secondary">Oferta samochodów dostepnych w naszym salonie</h2>
+                    <ul class="cars--select" id="carsSelect">
+                    </ul>
+                </section>
+
+            </main>
+        </section>
+    </div>
+    <section class="modal-container">
+        <div class="modal hidden" id="form--personal-data">
+            <button class="close-modal">&times;</button>
+            <h1 class="preview-from-form"></h1>
+            <h1 class="heading-primary">Podaj swoje dane</h1>
+            <d>
+
+                <form>
+                    <h2>Formularz danych przyszłego właściciela</h2>
+                    <div class="sign-in">
+                        <label for="name">Imię właściciela</label>
+                        <input class="name" type="text" id="name" placeholder="Podaj swoje imię">
+                        <label for="surname">Nazwisko właściciela</label>
+                        <input class="surname" type="text" id="surname" placeholder="Podaj swoje nazwisko">
+                        <p id="warning-field"></p>
+                        <h2>Wybierz rodzaj finansowania</h2>
+                        <div class="financing-field">
+                            <div class="cash-field">
+                                <label for="btn-cash">Gotówka</label>
+                                <input type="radio" name="finansowanie" id="btn-cash">
+                            </div>
+                            <div class="leasing-fiend">
+                                <label for="btn-leasing">Leasing</label>
+                                <input type="radio" name="finansowanie" id="btn-leasing">
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <label>Wybierz datę odbioru zamówienia (dostępna data do 14dni od dziś)</label>
+                        <select id="date-of-order-input">
+                            <option></option>
+                        </select>
+                    </div>
+                </form>
+                <br>
+                <button type="submit" value="Przejdź dalej" class="btn btn-przejdzDalej">Przejdź dalej</button>
+
+                <div class="accessories" id="id-accessories">
+                    <h2 class="heading-secondary"> Dobierz akcesoria do swoich zakupów</h2>
+                    <ul class="accessories--select" id="accessories-select">
+                    </ul>
+                </div>
+        </div>
+        </div>
+        <div class="modal hidden" id="summary">
+            <button class="close-modal close-summary">&times;</button>
+            <button class="btn back-to-form">Wróć do formularza</button>
+            <button type="submit" value="order" class="btn btn-order">Zamawiam</button>
+            <h1>Potwierdź swoje dane oraz zamówienie 🚗</h1>
+            <h2>Twoje dane</h2>
+            <p id="data-name"></p>
+            <p id="data-surname"></p>
+            <p id="data-financing"></p>
+            <p id="order-date"></p>
+            <h2>Twoje zakupy</h2>
+            <p class="payment">Do zapłaty</p>
+            <p class="items-in-cart">Przedmioty w koszyku</p>
+        </div>
+
+        <div class="modal hidden" id="present-cart-container">
+            <button class="btn btn-back-to-page">Wróć do strony głównej</button>
+            <h1>Twoje aktualne zakupy</h1>
+            <p class="cart-price">Do zapłaty</p>
+            <p class="present-cart-items">
+            <p class="cart-preview">Przedmioty w koszyku</p>
+            </p>
+        </div>
+        <div class="modal hidden" id="last-page">
+            <h1>Dziękujemy za zakup w naszym serwisie! Możesz wrócić do strony głównej</h1>
+            <button class="btn btn--back-to-main-page ">Wróć do strony głównej</button>
+        </div>
+        </main>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2024 Strona Samochodowa</p>
+    </footer>
+</body>
+
+</html>
