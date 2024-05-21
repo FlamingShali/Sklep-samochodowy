@@ -159,52 +159,49 @@ const goToSummary = function () {
   }
 };
 
-const createItemHTML = function (type, item, index) {
-  if (type === 'car') {
-    return `
-      <li class="car">
-        <h4 class="car--name">${item.name}</h4>
-        <img class="car--img" src="${item.img}">
-        <h3 class="heading-tertiary">O samochodzie:</h3>
-        <p class="car--info">Rok produkcji: ${item.yearOfProduction}</p>
-        <p class="car--info">Kolor: ${item.color}</p>
-        <p class="car--info">Przebieg: ${item.mileage} km</p>
-        <button class="btn btn-addToCart" onclick="addToCart(arrCars[${index}])">Dodaj do koszyka</button>
-        <p class="car--info">Cena: ${item.price} PLN</p>
-      </li>`;
-  } else if (type === 'accessory') {
-    return `
-      <li class="item">
-        <h4 class="item--name">${item.name}</h4>
-        <img class="item--img" src="${item.img}">
-        <p class="item--info">${item.description}</p>
-        <button class="btn btn-addToCart" onclick="addToCart(arrAccessories[${index}])">Dodaj do koszyka</button>
-        <p class="item--info">Cena: ${item.price} PLN</p>
-      </li>`;
-  } else if (type === 'cart') {
-    return `
-      <li class="car">
-        <h4 class="car--name">${item.name}</h4>
-        <p class="car--info">Cena: ${item.price} PLN</p>
-        <img class="car--img" src="${item.img}">
-        <button class="btn btn-deleteFromCart" onclick="deleteFromCart(cart[${index}])">Usuń z koszyka</button>
-      </li>`;
-  }
+const generateCarItemHTML = function (car, index) {
+  return `<li class="car">
+            <h4 class="car--name">${car.name}</h4>
+            <img class="car--img" src="${car.img}">
+            <h3 class="heading-tertiary">O samochodzie:</h3>
+            <p class="car--info">Rok produkcji: ${car.yearOfProduction}</p>
+            <p class="car--info">Kolor: ${car.color}</p>
+            <p class="car--info">Przebieg: ${car.mileage} km</p>
+            <button class="btn btn-addToCart" onclick="addToCart(arrCars[${index}])">Dodaj do koszyka</button>
+            <p class="car--info">Cena: ${car.price} PLN</p>
+          </li>`;
+};
+
+const generateAccessoryItemHTML = function (item, index) {
+  return `<li class="item">
+            <h4 class="item--name">${item.name}</h4>
+            <img class="item--img" src="${item.img}">
+            <p class="item--info">${item.description}</p>
+            <button class="btn btn-addToCart" onclick="addToCart(arrAccessories[${index}])">Dodaj do koszyka</button>
+            <p class="item--info">Cena: ${item.price} PLN</p>
+          </li>`;
+};
+
+const generateCartItemHTML = function (item, index) {
+  return `<li class="car">
+            <h4 class="car--name">${item.name}</h4>
+            <p class="car--info">Cena: ${item.price} PLN</p>
+            <img class="car--img" src="${item.img}">
+            <button class="btn btn-deleteFromCart" onclick="deleteFromCart(cart[${index}])">Usuń z koszyka</button>
+          </li>`;
+};
+
+const generateCartItems = function (cart) {
+  return cart.map((item, index) => generateCartItemHTML(item, index)).join('');
 };
 
 const generateCarItems = function (arr) {
-  return arr.map((car, index) => createItemHTML('car', car, index)).join('');
+  return arr.map((car, index) => generateCarItemHTML(car, index)).join('');
 };
 
 const generateAccessoryItems = function (arr) {
   return arr
-    .map((item, index) => createItemHTML('accessory', item, index))
-    .join('');
-};
-
-const generateCartItems = function (cart) {
-  return cart
-    .map((item, index) => createItemHTML('cart', item, index))
+    .map((item, index) => generateAccessoryItemHTML(item, index))
     .join('');
 };
 
